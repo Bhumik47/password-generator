@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+}
+.container{
+    width: 90%;
+    max-width: 450px;
+}
+
+h1{
+    color: aliceblue;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.display-container{
+    position: relative;
+    background-color: #09334b;
+    border-radius: 1rem;
+    border-bottom: 0.35rem solid rgb(7, 7, 51);
+    margin: 1rem 0;
+    padding-top: 0.35rem;
+}
+
+.password-display{
+    width: 100%;
+    background-color: transparent;
+    padding: 1.15rem 1rem;
+    color: yellowgreen;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 30px;
+    letter-spacing: 1px;
+    padding-right: 3.25rem;
+    border: none;
+}
+
+.password-display::placeholder{
+    position: absolute;
+    top: 50%;
+    left: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 30px;
+    color:rgb(255, 255, 0);
+    opacity: 0.65;
+    text-transform: uppercase;
+    transform: translateY(-50%);
+}
+
+.display-container button{
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.input-section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 1rem;
+    padding: 2rem;
+    background-color: #09334b;
+    border-bottom: 0.35rem solid rgb(7, 7, 51);
+}
+
+.password-length{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.password-length p:nth-child(1){
+    color: azure;
+    font-size: 1.5rem;
+}
+.password-length p:nth-child(2){
+    color: yellow;
+    font-size: 1.5rem;
+}
+
+.strength{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.strength p{
+    color: azure;
+    font-size: 1.5rem;
+}
+.strength div{
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+}
+
+.generate-btn{
+    width: 100%;
+    padding: 1rem 0;
+    background-color: #2a2a72;
+    text-align: center;
+    border-radius: 0.75rem;
+    border-bottom: 0.35rem solid yellow;
+    letter-spacing: 1px;
+    color:yellow;
+    font-weight: 600;
+    font-size: 1.25rem;
+    outline: none;
+}
+
+.check{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0 1rem;
+}
+
+.check input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid cyan;
+    cursor: pointer;
+    position: relative;
+    border-radius: 50%;
+}
+
+.check input:checked{
+    background-color:greenyellow;
+    box-shadow: 0px 0px 4px 1px greenyellow;
+}
+.check label{
+    color: azure;
+    font-size: 1.25rem;
+    letter-spacing: 0.75px;
+    cursor: pointer;
+}
+
+.slider{
+    appearance: none;
+    width: 100%;
+    height: 0.75rem;
+    cursor: pointer;
+    background-color: #2a2a72;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    border: none;
+    outline: none;
+}
+
+.slider::-webkit-slider-thumb{
+    position: relative;
+    appearance: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: yellow;
+    cursor: grabbing;
+    margin-top: -3px;
+    box-shadow: 0px 0px 20px 0px yellowgreen;
+    transition: all 100ms ease-in;
+}
+.slider:focus{
+    outline: 3px solid yellow;
+}
+.slider::-webkit-slider-thumb:hover{
+    outline: 2px solid yellow;
+    background: #2a2a72;
+    box-shadow: 0px 0px 25px 5px yellow;
+}
+
+.display-container button{
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.display-container button span{
+    position: absolute;
+    background-color: #2a2a72;
+    color: yellow;
+    font-size: 1.25rem;
+    top: -41px;
+    left: -25px;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all 250ms ease-in-out;
+}
+
+.display-container button span.active{
+    opacity: 1;
+    transform: scale(1);
+}
